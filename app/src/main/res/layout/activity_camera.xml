@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".CameraActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/topElement">
+
+        <ImageView
+            android:id="@+id/faceDetection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="18dp"
+            android:paddingRight="20dp"
+            android:src="@drawable/tag_faces_off" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/grass_24"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="18dp"
+            android:paddingRight="20dp"
+            android:id="@+id/convertToGray"/>
+
+    </RelativeLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:id="@+id/cameraCard"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="80dp"
+        app:cardCornerRadius="20dp">
+
+        <org.opencv.android.JavaCameraView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/cameraView"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomLayout">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/catching_pokemon_24"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/shutter"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:src="@drawable/flip_camera_ios_24"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/shutter"
+            android:paddingBottom="18dp"
+            android:paddingLeft="30dp"
+            android:id="@+id/flipCamera"/>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
